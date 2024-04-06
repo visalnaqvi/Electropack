@@ -1,0 +1,13 @@
+.backgroundImgWrapper{
+    position: relative;
+    height: 400px;
+    width: 30%;
+    overflow: hidden;
+}
+
+.wrapper{
+    background-color: #eeeeee;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+
