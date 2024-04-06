@@ -45,7 +45,7 @@ const router = useRouter()
             <a className="contact-button" href="tel:+9911390398"><button className="primary-btn blue">Contact Us On: +919911390398</button></a>
           </div>
           
-            <p className="content">Welcome to Electropack Constructions and Interiors where craftsmanship meets innovation in construction and interior design. With a passion for precision and an unwavering commitment to quality, we specialize in turning your dreams into reality, whether it's crafting your ideal home or optimizing your office space for maximum efficiency and style. Backed by a team of skilled professionals and guided by a dedication to client satisfaction, we blend creativity with technical expertise to deliver projects that inspire and endure. Explore our comprehensive range of services and let us bring your vision to life, one meticulous detail at a time.</p>
+            <p className="content">Welcome to Electropack Constructions and Interiors where craftsmanship meets innovation in construction and interior design. With a passion for precision and an unwavering commitment to quality, we specialize in turning your dreams into reality, whether it&apos;s crafting your ideal home or optimizing your office space for maximum efficiency and style. Backed by a team of skilled professionals and guided by a dedication to client satisfaction, we blend creativity with technical expertise to deliver projects that inspire and endure. Explore our comprehensive range of services and let us bring your vision to life, one meticulous detail at a time.</p>
             <div style={{position:"relative", width:"100%", height:"400px"}}>
             <Image onClick={()=>{router.push("/login")}} src={longBanner} fill={true} style={{objectFit:"contain"}} alt="some"/>
           </div>
@@ -66,7 +66,7 @@ const router = useRouter()
               }
           </div>
           <h2 className="subHeading center">Why to choose Us?</h2>
-          <p className="content center">Choose us for our unwavering commitment to excellence in every aspect of your project. With a proven track record of delivering exceptional results, we prioritize client satisfaction above all else. Our team of seasoned professionals combines creativity with technical expertise to bring your vision to life, ensuring every detail is meticulously executed to perfection. From personalized service and transparent communication to efficient project management and top-notch craftsmanship, we go above and beyond to exceed your expectations. When you choose us, you're choosing a partner dedicated to making your construction and interior design journey seamless, enjoyable, and ultimately, unforgettable.</p>
+          <p className="content center">Choose us for our unwavering commitment to excellence in every aspect of your project. With a proven track record of delivering exceptional results, we prioritize client satisfaction above all else. Our team of seasoned professionals combines creativity with technical expertise to bring your vision to life, ensuring every detail is meticulously executed to perfection. From personalized service and transparent communication to efficient project management and top-notch craftsmanship, we go above and beyond to exceed your expectations. When you choose us, you&apos;re choosing a partner dedicated to making your construction and interior design journey seamless, enjoyable, and ultimately, unforgettable.</p>
         </div>
         <div className="body-wrapper">
               {
