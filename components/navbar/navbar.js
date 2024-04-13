@@ -14,6 +14,12 @@ const NavBar = () => {
     useEffect(()=>{
         setIsVisible(size.width>=1040)
     },[size])
+
+    const mbNav = ()=>{
+        if(size.width<1040){
+            setIsVisible(false);
+        }
+    }
     return (
         <div>
             <div className={`${styles.navBar} body-wrapper justify-between`} style={{ flexWrap: "nowrap" }}>
@@ -22,14 +28,20 @@ const NavBar = () => {
             }} className={styles.hamMenu}>
             {isVisible ? <GiCancel style={{pointerEvents:"none"}} /> :<GiHamburgerMenu style={{pointerEvents:"none"}} />}
             </div>
-                <Image src={logo} width={180} height={60} alt="al azeem logo" />
+                {size.width> 500 ?<Image src={logo} width={250} style={{objectFit:"contain"}} alt="al azeem logo" />:
+                <Image src={logo} width={150} style={{objectFit:"contain"}} alt="al azeem logo" />}
                <div className={`${styles.mainMenu} ${!isVisible && styles.notVisible}`}>
                     <ul className="body-wrapper">
-                    <li onClick={()=>{router.push("/")}}>Home</li>
-                    <li onClick={()=>{router.push("/contactus")}}>Contact Us</li>
-                    <li onClick={()=>{router.push("/aboutUs")}}>About Us</li>
-                    <li onClick={()=>{router.push("/interiorProjects")}}>Interior Project</li>
-                    <li onClick={()=>{router.push("/exteriorProjects")}}>Exterior Project</li>
+                    <li onClick={()=>{mbNav()
+                        router.push("/")}}>Home</li>
+                    <li onClick={()=>{mbNav()
+                        router.push("/contactus")}}>Contact Us</li>
+                    <li onClick={()=>{mbNav()
+                        router.push("/aboutUs")}}>About Us</li>
+                    <li onClick={()=>{mbNav()
+                        router.push("/interiorProjects")}}>Interior Project</li>
+                    <li onClick={()=>{mbNav()
+                        router.push("/exteriorProjects")}}>Exterior Project</li>
                     </ul>
                 </div>
                 <div className={`${styles.w20} body-wrapper`}>

@@ -46,14 +46,14 @@ const ExteriorProjects = () => {
         <div className={`${styles.slide} ${styles.contactus} bg-class flex-class`}>
             
             <div className={styles.content}>
-                <p className={styles.heading}>Our Interior Projects</p>
-                <p className={styles.text}>Explore our diverse portfolio of interior projects, each meticulously crafted to inspire and elevate your space with timeless design.</p>
+                <p className={styles.heading}>Our Exterior Projects</p>
+                <p className={styles.text}>Explore our diverse portfolio of exterior projects, each meticulously crafted to inspire and elevate your space with timeless design.</p>
             </div>
             <div className={styles.shade}></div>
         </div>
         <div className="margin">
         <h2 className="subHeading">Electropack Engineers</h2>
-        <p className="content">We provide full construction plus interior services. We will build your place up from ground we have perfect team for your build. We provide all materials with labor and installation. Contact us for more information.</p>
+        <p className="content">We provide full construction plus exterior services. We will build your place up from ground we have perfect team for your build. We provide all materials with labor and installation. Contact us for more information.</p>
        
     
        <Gallary images={images_2} />

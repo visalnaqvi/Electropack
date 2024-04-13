@@ -3,11 +3,18 @@
     height: 400px;
     width: 30%;
     overflow: hidden;
+    min-width: 380px;
 }
 
 .wrapper{
     background-color: #eeeeee;
     padding-bottom: 40px;
     border-radius: 10px;
+}
+
+@media only screen and (max-width:450px){
+    .wrapper{
+        background-color: #fff;
+    }
 }
 

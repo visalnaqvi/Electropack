@@ -8,8 +8,8 @@ const Gallary = ({images})=>{
                 images.map((e,i)=>(
                     <div key={i} className={styles.backgroundImgWrapper}>
                     <Image className={styles.backgroundImg} 
-                    fill={true} style={{objectFit: "contain" , objectPosition:"center" , margin:"40px"}} 
-                    // width={500} height={500}
+                    fill={false} style={{objectFit: "contain" , objectPosition:"center" , margin:"40px"}} 
+                    height={400}
                     src={e} alt="iraq ziyarat packages" />
                     </div>
                 ))

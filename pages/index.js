@@ -7,7 +7,7 @@ import Map from "../components/map/map.js"
 import longBanner from "../public/backgroundImages/long_banner.png"
 import SingleImage from "../components/carousel/singleImage.js"
 import background from "../public/sliders/homePageSlider/desktop/slider_1.png"
-import background_mb from "../public/sliders/homePageSlider/desktop/slider_1.png"
+import background_mb from "../public/sliders/homePageSlider/mobile/silder_1_mb.png"
 import { useWindowSize } from "@uidotdev/usehooks";
 import Head from "next/head.js"
 import Image from "next/image.js"
@@ -34,11 +34,9 @@ const router = useRouter()
        <Head>
       <title>Best Interior and Construction Service in Noida</title>
     </Head>
-      {
-        size.width > 700 ?
-        <SingleImage url={[background , background_mb]} /> :
-        <CarouselComp width={700} height={200} images={mobileImages} />
-      }
+    
+        <SingleImage url={[background , background_mb]} /> 
+      
         <div className="margin">
           <div className="body-wrapper justify-between">
             <h2 className="subHeading">Our foundation</h2>
