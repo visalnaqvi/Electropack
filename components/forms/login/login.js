@@ -8,12 +8,16 @@ const LoginComponent = () => {
     const [name, setName] = useState("");
     const [showPass, setShowPass] = useState(false);
     const [password, setPassword] = useState("");
+    const [isSuccess , setSuccess] = useState(false)
     const [isRegister, setIsRegister] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
     const onLogin = async () => {
+       
         await checkUser(userId, password)
         if (!checkStorageForAdminToken()) {
+           
             router.push("/")
         } else {
             router.push("/admin-panel")
@@ -21,12 +25,18 @@ const LoginComponent = () => {
     }
 
     const onRegister = async () => {
-        await addUser({ name: name, userId: userId, password: password, role: "customer" })
-        if (!checkStorageForAdminToken()) {
-            router.push("/")
-        } else {
-            router.push("/admin-panel")
-        }
+        try{
+            setIsLoading(true)
+            await addUser({ name: name+" nn inteiror user", userId: userId, password: password, role: "customer" })
+            setIsLoading(false)
+            setSuccess(true)
+        }catch{(e)=>{console.log(e)}}
+
+        // if (!checkStorageForAdminToken()) {
+        //     router.push("/")
+        // } else {
+        //     router.push("/admin-panel")
+        // }
 
     }
     return (
@@ -54,10 +64,12 @@ const LoginComponent = () => {
                             <div className="body-wrapper justify-between"><label className={styles.label} htmlFor="password">Password</label><p style={{ cursor: "pointer" }} onClick={() => setShowPass(!showPass)} className={styles.content}>Show Password</p></div>
                             <input onChange={(e) => setPassword(e.target.value)} className={styles.input} type={showPass ? "text" : "password"} id="password" name="password" placeholder="Enter your Password" />
                         </div> */}
-                        <button onClick={(e) => {
+                       {!isLoading ? 
+                            <button onClick={(e) => {
                             e.preventDefault()
                             isRegister ? onRegister() : onLogin()
-                        }} className="primary-btn blue">{isRegister ? "Submit" : "Login"}</button>
+                        }} className="primary-btn blue">{isSuccess?"We have recieved your request. We will be in touch shortly":isRegister ? "Submit" : "Login"}</button>: <p>Loading...</p>}
+                        {isSuccess && <p style={{textDecoration:"underline" , marginTop:'10px' , textAlign:"center" , cursor:"pointer"}} onClick={()=>{router.push("/")}}>Go Back</p>}
                     </form>
                 </div>
                 {/* {isRegister ? <p className={styles.boldContent}>Already have an account? <snap onClick={() => setIsRegister(false)} className={styles.link}>Login</snap></p> : <p className={styles.boldContent}>Dont&apos;t have an account? <snap onClick={() => setIsRegister(true)} className={styles.link}>Create an Account</snap></p>}

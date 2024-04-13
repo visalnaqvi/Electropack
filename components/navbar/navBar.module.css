@@ -57,6 +57,15 @@
     display: none !important;
 }
 
+.pointer::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: crimson;
+}
+
 @media only screen and (max-width:1040px) {
     .mainMenu{
         position: absolute;

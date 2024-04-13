@@ -34,14 +34,14 @@ const NavBar = () => {
                     <ul className="body-wrapper">
                     <li onClick={()=>{mbNav()
                         router.push("/")}}>Home</li>
+                    <li className={styles.pointer} onClick={()=>{mbNav()
+                    router.push("/interiorProjects")}}>Interior Project</li>
+                <li className={styles.pointer} onClick={()=>{mbNav()
+                    router.push("/exteriorProjects")}}>Exterior Project</li>
                     <li onClick={()=>{mbNav()
                         router.push("/contactus")}}>Contact Us</li>
                     <li onClick={()=>{mbNav()
                         router.push("/aboutUs")}}>About Us</li>
-                    <li onClick={()=>{mbNav()
-                        router.push("/interiorProjects")}}>Interior Project</li>
-                    <li onClick={()=>{mbNav()
-                        router.push("/exteriorProjects")}}>Exterior Project</li>
                     </ul>
                 </div>
                 <div className={`${styles.w20} body-wrapper`}>

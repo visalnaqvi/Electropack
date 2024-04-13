@@ -44,7 +44,11 @@ const router = useRouter()
           </div>
           
             <p className="content">Welcome to Electropack Constructions and Interiors where craftsmanship meets innovation in construction and interior design. With a passion for precision and an unwavering commitment to quality, we specialize in turning your dreams into reality, whether it&apos;s crafting your ideal home or optimizing your office space for maximum efficiency and style. Backed by a team of skilled professionals and guided by a dedication to client satisfaction, we blend creativity with technical expertise to deliver projects that inspire and endure. Explore our comprehensive range of services and let us bring your vision to life, one meticulous detail at a time.</p>
-            <div style={{position:"relative", width:"100%", height:"400px"}}>
+           <div className="body-wrapper justify-start">
+            <button className="primary-btn blue" onClick={()=>{router.push("/interiorProjects")}} style={{marginRight:"10px"}}>Explore Interior Projects</button>
+            <button className="primary-btn blue" onClick={()=>{router.push("/exteriorProjects")}}>Explore Exterior Projects</button>
+            </div>
+            <div style={{position:"relative", width:"100%", height:`${size.width<800?"200px":"400px"}`}}>
             <Image onClick={()=>{router.push("/login")}} src={longBanner} fill={true} style={{objectFit:"contain"}} alt="some"/>
           </div>
           <h2 className="boldHeading center">Our Services</h2>

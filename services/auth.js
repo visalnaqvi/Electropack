@@ -67,8 +67,8 @@ export const checkStorageForToken = ()=>{
 export const addUser = async (data)=>{
     try{
         await addDoc(userCollection , data);
-        let token = generateToken(data);
-        return token;
+        // let token = generateToken(data);
+        // return token;
     }catch(err){
         return {status:"warning" , msg:"Something went wrong"}
     }
