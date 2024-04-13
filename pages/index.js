@@ -7,7 +7,7 @@ import Map from "../components/map/map.js"
 import longBanner from "../public/backgroundImages/long_banner.png"
 import SingleImage from "../components/carousel/singleImage.js"
 import background from "../public/sliders/homePageSlider/desktop/slider_1.png"
-import background_mb from "../public/sliders/homePageSlider/mobile/silder_1_mb.png"
+import background_mb from "../public/sliders/homePageSlider/mobile/slider_1_mb.png"
 import { useWindowSize } from "@uidotdev/usehooks";
 import Head from "next/head.js"
 import Image from "next/image.js"

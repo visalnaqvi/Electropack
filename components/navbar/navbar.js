@@ -29,7 +29,7 @@ const NavBar = () => {
             {isVisible ? <GiCancel style={{pointerEvents:"none"}} /> :<GiHamburgerMenu style={{pointerEvents:"none"}} />}
             </div>
                 {size.width> 500 ?<Image src={logo} width={250} style={{objectFit:"contain"}} alt="al azeem logo" />:
-                <Image src={logo} width={150} style={{objectFit:"contain"}} alt="al azeem logo" />}
+                <Image src={logo} width={140} style={{objectFit:"contain"}} alt="al azeem logo" />}
                <div className={`${styles.mainMenu} ${!isVisible && styles.notVisible}`}>
                     <ul className="body-wrapper">
                     <li onClick={()=>{mbNav()
@@ -47,7 +47,7 @@ const NavBar = () => {
                 <div className={`${styles.w20} body-wrapper`}>
                     
                    
-                <button onClick={()=>{router.push("/login")}} className="primary-btn blue" style={{ marginTop: "0" }}>Request A Callback</button>
+                <button onClick={()=>{router.push("/login")}} className="primary-btn blue" style={{ marginTop: "0" , fontSize:"12px" }}>Get Callback</button>
 
                    
                 </div>
