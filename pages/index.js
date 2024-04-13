@@ -2,6 +2,8 @@ import ImageCard from "@/components/cards/imageCard/imageCard"
 import CarouselComp from "@/components/carousel/carousel"
 import services from "../data/services.js"
 import features from "../data/features.js"
+// import heroVideo from "../public/gallary/hero.mp4"
+// import heroVideo2 from "../public/gallary/hero2.mp4"
 import testi from "../data/testimonials.js"
 import Map from "../components/map/map.js"
 import longBanner from "../public/backgroundImages/long_banner.png"
@@ -13,6 +15,7 @@ import Head from "next/head.js"
 import Image from "next/image.js"
 import TestimonialCard from "@/components/cards/testimonialCard/testimonialCard.js"
 import { useRouter } from "next/navigation.js"
+import VideoHero from "@/components/videoHero/videoHero.js"
 export default function Home() {
   const desktopImages = [
     "/sliders/homePageSlider/desktop/slider_1.png",
@@ -51,6 +54,7 @@ const router = useRouter()
             <div style={{position:"relative", width:"100%", height:`${size.width<800?"200px":"400px"}`}}>
             <Image onClick={()=>{router.push("/login")}} src={longBanner} fill={true} style={{objectFit:"contain"}} alt="some"/>
           </div>
+         <VideoHero />
           <h2 className="boldHeading center">Our Services</h2>
           <div className="body-wrapper">
               {
