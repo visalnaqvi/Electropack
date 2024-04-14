@@ -13,24 +13,27 @@ import background_mb from "../public/sliders/homePageSlider/mobile/slider_1_mb.p
 import { useWindowSize } from "@uidotdev/usehooks";
 import Head from "next/head.js"
 import Image from "next/image.js"
+import img_1_1 from "../public/gallary/interior/1/1.jpg"
+import img_5_1 from "../public/gallary/interior/5/31.jpeg"
+import img_5_3 from "../public/gallary/interior/5/33.jpeg"
+import img_3_2 from "../public/gallary/interior/3/28.jpeg"
+
+import img_9_10 from "../public/gallary/construction/17.jpg"
+import img_9_9 from "../public/gallary/construction/16.jpg"
+import img_9_5 from "../public/gallary/construction/12.jpg"
+
+
 import TestimonialCard from "@/components/cards/testimonialCard/testimonialCard.js"
 import { useRouter } from "next/navigation.js"
 import VideoHero from "@/components/videoHero/videoHero.js"
+import Gallary from "@/components/gallary/gallary.js"
 export default function Home() {
-  const desktopImages = [
-    "/sliders/homePageSlider/desktop/slider_1.png",
-    "/sliders/homePageSlider/desktop/slider_2.png",
-    "/sliders/homePageSlider/desktop/slider_3.png",
 
-]
-
-const mobileImages = [
-  "/sliders/homePageSlider/mobile/slider_1_mb.png",
-  "/sliders/homePageSlider/mobile/slider_2_mb.png",
-
-]
 const size = useWindowSize();
-const router = useRouter()
+const router = useRouter();
+
+const images_1 = [img_1_1 , img_5_1 , img_5_3 , img_3_2]
+const images_2 = [img_9_10 , img_9_9 , img_9_5 ]
   return (
    
     <div>
@@ -71,6 +74,16 @@ const router = useRouter()
                 ))
               }
           </div>
+          <h2 className="subHeading center">Recent Interior Projects</h2>
+          <Gallary images={images_1}></Gallary>
+          <div className="body-wrapper">
+          <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/interiorProjects")}}>Explore More Interior Projects</button>
+              </div>
+          <h2 className="subHeading center">Recent Exterior Projects</h2>
+          <Gallary images={images_2}></Gallary>
+          <div className="body-wrapper">
+          <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/exteriorProjects")}}>Explore More Exterior Projects</button>
+              </div>
           <h2 className="subHeading center">Why to choose Us?</h2>
           <p className="content center">Choose us for our unwavering commitment to excellence in every aspect of your project. With a proven track record of delivering exceptional results, we prioritize client satisfaction above all else. Our team of seasoned professionals combines creativity with technical expertise to bring your vision to life, ensuring every detail is meticulously executed to perfection. From personalized service and transparent communication to efficient project management and top-notch craftsmanship, we go above and beyond to exceed your expectations. When you choose us, you&apos;re choosing a partner dedicated to making your construction and interior design journey seamless, enjoyable, and ultimately, unforgettable.</p>
         </div>
