@@ -1,8 +1,9 @@
-import { BsFillMegaphoneFill, BsFillPhoneFill, BsPhone } from "react-icons/bs"
 import styles from "./videoHero.module.css"
 import { FaPhoneAlt } from "react-icons/fa"
+import { useRouter } from "next/navigation"
 
 const VideoHero = ()=>{
+    const router = useRouter()
     return (
         <div className={`${styles.wrapper} body-wrapper`}>
         <div className={styles.column}>
