@@ -66,14 +66,7 @@ const images_2 = [img_9_10 , img_9_9 , img_9_5 ]
                 ))
               }
           </div>
-          <h2 className="subHeading center">What our customers say?</h2>
-          <div className="body-wrapper">
-              {
-                testi.map((d,i)=>(
-                  <TestimonialCard key={i} data={d} />
-                ))
-              }
-          </div>
+          
           <h2 className="subHeading center">Recent Interior Projects</h2>
           <Gallary images={images_1}></Gallary>
           <div className="body-wrapper">
@@ -84,6 +77,15 @@ const images_2 = [img_9_10 , img_9_9 , img_9_5 ]
           <div className="body-wrapper">
           <button style={{marginTop:"20px",padding:"20px" , fontSize:"20px"}} className="primary-btn blue" onClick={()=>{router.push("/exteriorProjects")}}>Explore More Exterior Projects</button>
               </div>
+          <h2 className="subHeading center">What our customers say?</h2>
+          <div className="body-wrapper">
+              {
+                testi.map((d,i)=>(
+                  <TestimonialCard key={i} data={d} />
+                ))
+              }
+          </div>
+         
           <h2 className="subHeading center">Why to choose Us?</h2>
           <p className="content center">Choose us for our unwavering commitment to excellence in every aspect of your project. With a proven track record of delivering exceptional results, we prioritize client satisfaction above all else. Our team of seasoned professionals combines creativity with technical expertise to bring your vision to life, ensuring every detail is meticulously executed to perfection. From personalized service and transparent communication to efficient project management and top-notch craftsmanship, we go above and beyond to exceed your expectations. When you choose us, you&apos;re choosing a partner dedicated to making your construction and interior design journey seamless, enjoyable, and ultimately, unforgettable.</p>
         </div>
